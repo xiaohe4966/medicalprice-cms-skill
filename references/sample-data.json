@@ -1,0 +1,138 @@
+{
+    "version": "2.0",
+    "lastUpdated": "2026-08-21",
+    "hospitals": [
+        {
+            "code": "szufh",
+            "name": "深圳新風和睦家",
+            "ownership": "private",
+            "link": "https:\/\/www.szufh.hk\/",
+            "tag": "高透明度",
+            "order": 1
+        },
+        {
+            "code": "cuhk",
+            "name": "香港中文大學醫院",
+            "ownership": "private",
+            "link": "https:\/\/www.cuhkmc.hk\/",
+            "tag": "",
+            "order": 2
+        }
+    ],
+    "departments": [
+        {
+            "code": "imaging",
+            "name": "影像科",
+            "order": 1,
+            "emoji": "🔬",
+            "cardDesc": "胃鏡、大腸鏡、CT 及 MRI 等檢查套餐價格。",
+            "accent": "#7C3AED",
+            "bg": "#F5F3FF",
+            "home": "specialty",
+            "pageTitle": "港資私家醫院內窺鏡與影像掃描套餐價格比較",
+            "shortTitle": "內窺鏡與影像",
+            "asideTitle": "",
+            "asideBg": "bg-blue-50",
+            "asideExtra": "",
+            "aliases": ""
+        },
+        {
+            "code": "gynecology",
+            "name": "婦科",
+            "order": 2,
+            "emoji": "👩",
+            "cardDesc": "子宮肌瘤、子宮鏡及婦科手術套餐價格比較。",
+            "accent": "#F43F5E",
+            "bg": "#FDF2F8",
+            "home": "specialty",
+            "pageTitle": "港資私家醫院婦科手術套餐價格比較",
+            "shortTitle": "婦科收費比較",
+            "asideTitle": "",
+            "asideBg": "bg-blue-50",
+            "asideExtra": "",
+            "aliases": ""
+        }
+    ],
+    "items": [
+        {
+            "code": "outpatient",
+            "dept": "outpatient",
+            "name": "全科門診診症費",
+            "aliases": ""
+        },
+        {
+            "code": "outpatientSpecialty",
+            "dept": "outpatientSpecialty",
+            "name": "專科門診診症費",
+            "aliases": ""
+        },
+        {
+            "code": "ward.standard",
+            "dept": "ward",
+            "name": "標準病房",
+            "aliases": ""
+        }
+    ],
+    "prices": [
+        {
+            "item": "outpatient",
+            "hospital": "szufh",
+            "slot": "regular",
+            "price": "813",
+            "label": "日常門診",
+            "display": "￥625 – ￥1,000",
+            "remarks": "診金不包括小手術費、藥費及化驗費等。支持香港長者醫療券。",
+            "link": "https:\/\/www.szufh.hk\/service-fees.html",
+            "slotText": "星期一至五 08:30-17:30；星期六至日 08:30-17:30",
+            "tags": "",
+            "alert": 0
+        },
+        {
+            "item": "outpatient",
+            "hospital": "szufh",
+            "slot": "night",
+            "price": "1375",
+            "label": "夜診\/急診",
+            "display": "￥1,250 – ￥1,500",
+            "remarks": "診金不包括小手術費、藥費及化驗費等。支持香港長者醫療券。",
+            "link": "https:\/\/www.szufh.hk\/service-fees.html",
+            "slotText": "星期一至星期日 17:30-08:30（24小時全天候急診）",
+            "tags": "",
+            "alert": 0
+        },
+        {
+            "item": "outpatient",
+            "hospital": "szufh",
+            "slot": "holiday",
+            "price": "1375",
+            "label": "節日\/惡劣天氣",
+            "display": "￥1,250 – ￥1,500",
+            "remarks": "診金不包括小手術費、藥費及化驗費等。支持香港長者醫療券。",
+            "link": "https:\/\/www.szufh.hk\/service-fees.html",
+            "slotText": "國家法定公眾假期",
+            "tags": "",
+            "alert": 0
+        }
+    ],
+    "articles": [
+        {
+            "code": "cataract-cost-guide",
+            "heroEyebrow": "費用須知 · 眼科",
+            "heroTitle": "單眼日間套餐常見約 HK$2 萬起跳；高端晶體與風險分級可把區間拉到數倍",
+            "title": "白內障手術預算指南：私院套餐價、晶體級別與自付估算",
+            "lead": "白內障是香港需求最高的眼科手術之一。私院多以單眼日間超聲乳化 + 人工晶體植入套餐報價；價錢高低很大程度取決於晶體類型（單焦／散光／多焦等）與是否「全包醫生費」…",
+            "tag": "#費用須知",
+            "date": "2026-07-01",
+            "dateText": "2026年7月",
+            "image": "",
+            "body": "<p>…<\/p>"
+        }
+    ],
+    "pages": [
+        {
+            "code": "medical-sources",
+            "title": "資料來源與更新",
+            "content": "<section>…<\/section>"
+        }
+    ]
+}
