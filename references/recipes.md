@@ -117,10 +117,18 @@ php $SK/scripts/ftp-sync.php check     # 全量比对本地与线上（会回读
 
 FTP 凭据写在 CMS 项目 `.env` 的 `[ftp]` 段（`host` / `username` / `password` / `port`），或用 `MP_FTP_HOST` / `MP_FTP_USER` / `MP_FTP_PASS` 环境变量。**不要把密码写进代码或公开仓库。**
 
+新服务器上线前先确认 nginx 伪静态规则，否则所有 `.html` 美化链接会 404（`/index.php?s=/en/xxx.html` 正常但 `/en/xxx.html` 404 就是这个原因）：
+
+```nginx
+if (!-e $request_filename) {
+    rewrite ^(.*)$ /index.php?s=/$1 last;
+}
+```
+
 部署后自测：
-- 前台：`https://bijia.he66.cn/` 与一个详情页
-- 后台：`/h.php/<控制器>/index`（列表 JSON 必须含 `view_url`，否则预览按钮是 undefined）
-- 注意线上 nginx 需要伪静态规则把非静态路径交给 `index.php`，否则所有 `.html` 链接 404
+- 前台：`https://www.medicalprice.hk/`（默认 cht）与一个详情页 `/cht/dept-orthopedics-7.html`
+- 目标语种页面：改了 en 的数据就再验 `/en/...`，没有对应栏目会直接 404
+- 后台：后台入口文件（FastAdmin 默认 `h.php`）`/h.php/<控制器>/index` —— 列表 JSON 必须含 `view_url`，否则预览按钮是 undefined
 
 ## 11. 后台列表/预览问题排查
 

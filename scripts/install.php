@@ -64,7 +64,7 @@ if (!is_dir($backupDir)) {
     mkdir($backupDir, 0755, true);
 }
 $stamp = date('Ymd_His');
-$backupFile = $backupDir . "/bijia_{$stamp}.sql";
+$backupFile = $backupDir . "/cms_{$stamp}.sql";
 
 $existing = $pdo->query('SHOW TABLES')->fetchAll(PDO::FETCH_COLUMN);
 $backupTargets = [
@@ -78,7 +78,7 @@ foreach ($TABLES as $t) {
         $backupTargets[] = $t;
     }
 }
-$backup = "-- bijia.cn 备份 {$stamp}\n-- 表: " . implode(', ', $backupTargets) . "\n";
+$backup = "-- CMS 备份 {$stamp}\n-- 表: " . implode(', ', $backupTargets) . "\n";
 foreach ($backupTargets as $t) {
     $backup .= dumpTable($pdo, $t);
 }

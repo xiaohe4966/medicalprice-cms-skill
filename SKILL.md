@@ -23,7 +23,9 @@ CMS 项目根目录（本技能假定工具在跑）：
 
 在 CMS 根目录执行脚本最省事（`php scripts/medicalprice/import.php`）；技能目录里的副本用 `MP_CMS_ROOT` 指向项目即可。
 
-线上站点：`https://bijia.he66.cn`（**不是** `bijia.cn`，后者的公共 DNS 指向另一台机）。数据库在 `.env` 的 `[database]` 段里，通常就是线上那台机的 MySQL。
+线上站点（正式域名）：`https://www.medicalprice.hk/`（`medicalprice.hk` 会 301 到 `www`，以 `www` 为准）。默认语种是繁体中文（`cht`），页面路径形如 `/cht/dept-orthopedics-7.html`。数据库在 `.env` 的 `[database]` 段里，通常就是线上那台机的 MySQL。
+
+数据源仍是静态站 `https://boyiyang93.github.io/MedicalPrice`（`data/db.js` 是唯一数据底座），正式域名是 CMS 渲染的成品，两者不要混。
 
 ## 铁律
 

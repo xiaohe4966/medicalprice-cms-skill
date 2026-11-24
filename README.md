@@ -4,6 +4,8 @@
 
 内容类型：医院、科室、医疗项目、价格行、医疗情报文章、静态页。每个语种独立成行（`lang` + `copy_id`），共 16 个语言站。
 
+线上正式域名：`https://www.medicalprice.hk/`（默认繁体中文 `cht`）；数据源是静态站 `https://boyiyang93.github.io/MedicalPrice`。
+
 ## 安装
 
 克隆后把技能目录放进对应位置：
@@ -31,8 +33,8 @@ url_route_must = true
 
 [database]
 hostname = 127.0.0.1
-database = bijia
-username = bijia
+database = your_db
+username = your_db
 password = <你的密码>
 hostport = 3306
 prefix = fa_
